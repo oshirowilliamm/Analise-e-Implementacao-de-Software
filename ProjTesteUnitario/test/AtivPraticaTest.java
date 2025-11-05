@@ -5,11 +5,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class CalculoTest {
+public class AtivPraticaTest {
     
-    Calculo calc;   
+    AtivPratica proj;
     
-    public CalculoTest() {
+    public AtivPraticaTest() {
     }
     
     @BeforeClass
@@ -22,7 +22,7 @@ public class CalculoTest {
     
     @Before
     public void setUp() {
-        calc = new Calculo();
+        proj = new AtivPratica();
     }
     
     @After
@@ -30,18 +30,23 @@ public class CalculoTest {
     }
 
     @Test
-    public void testMedia() {
-        assertEquals(5, calc.Media(5, 7), 1);
+    public void testMaior() {
+        assertEquals(2, proj.Maior(2, 5, 4, 7, 10));
     }
 
     @Test
-    public void testMaiorNum() {
-        assertEquals(5, calc.MaiorNum(2, 10, 8));
+    public void testMultiplo() {
+        assertEquals(true, proj.Multiplo(50));
     }
 
     @Test
-    public void testPar() {
-        assertEquals(true, calc.Par(5));
+    public void testMediaNormal() {
+        assertEquals(7.2, proj.MediaNormal(6, 8, 3, 10, 9), 1);
+    }
+
+    @Test
+    public void testMediaPond() {
+        assertEquals(6, proj.MediaPond(9, 2, 9), 1);
     }
     
 }

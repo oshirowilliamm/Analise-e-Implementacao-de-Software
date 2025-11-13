@@ -33,21 +33,14 @@
            pesq.setR2(r2);
            pesq.setR3(r3);
            pesq.setR4(r4);
-           JOptionPane.showMessageDialog(null,"nome: "+pesq.getNome()+
-                   "\nemail: "+pesq.getEmail()+
-                   "\nResposta 1: "+pesq.getR1()+
-                   "\nResposta 2: "+pesq.getR2()+
-                   "\nResposta 3: "+pesq.getR3()+
-                   "\nResposta 4: "+pesq.getR4());
-           
            PesquisaDAO pesquisa = new PesquisaDAO();
-           if (pesquisa.InserirDAO(pesq) == true){
-                JOptionPane.showMessageDialog(null, "Dados inseridos com sucesso");
+           if (pesquisa.InserirDAO(pesq)==true){
+               JOptionPane.showMessageDialog(null,"Dados Inseridos com sucesso !!!");
             }
             else{
-                JOptionPane.showMessageDialog(null, "Erro no cadastro");
+               JOptionPane.showMessageDialog(null,"Erro no Cadastro !!!");
             }
-           
+            
            %>
            
     </body>
